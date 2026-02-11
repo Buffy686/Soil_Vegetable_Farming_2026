@@ -118,6 +118,104 @@ Production-grade relational database system for managing commercial vegetable fa
 - ✅ Exportable reports for regulatory compliance and record-keeping
 
 ---
+## Project 4: Compost Pricing Analysis & Market Benchmarking
+
+**File:** `compost_pricing_analysis.ipynb`
+
+### Background
+
+During conversations at COMPOST2026, facility operators expressed a common challenge: **uncertainty around competitive pricing strategies and lack of standardized market data**. Many facilities struggle to benchmark their pricing against regional competitors or understand how product quality, certifications, and processing methods should influence their pricing structure.
+
+This project addresses that challenge by creating a **data-driven framework for compost pricing analysis** that enables facilities to:
+- Benchmark their prices against regional and national averages
+- Understand price drivers (product quality, certifications, geography, processing methods)
+- Quantify the value of quality improvements and certifications
+- Make evidence-based pricing decisions
+
+### Project Overview
+
+This Jupyter notebook provides a complete workflow for collecting, analyzing, and benchmarking compost pricing data across facilities with different characteristics. The analysis framework includes:
+
+**Data Collection:**
+- Structured template for capturing pricing with contextual variables
+- Multi-dimensional categorization (product type, processing method, certification, region, market type)
+- Density normalization ($/cy to $/lb) for true cost comparisons
+- Quality metrics integration (maturity, feedstock, certifications)
+
+**Statistical Analysis:**
+- Comprehensive variability assessment using coefficient of variation
+- Categorical comparisons with statistical significance testing (t-tests, ANOVA)
+- Multi-factor interaction analysis (e.g., how region and product type jointly affect pricing)
+- Density-normalized price comparisons
+
+**Visualizations:**
+- Price distribution histograms and box plots
+- Category-specific comparisons with error bars
+- Multi-factor heatmaps showing interaction effects
+- Correlation analysis between density and pricing
+
+### Technical Approach
+
+The analysis uses Python with pandas, scipy, and seaborn to provide robust statistical comparisons across categorical variables. Key features include:
+
+- **Standardized data schema** for consistent collection across diverse facility types
+- **Automated statistical testing** to identify significant price differences between categories
+- **Effect size calculations** to quantify practical significance beyond p-values
+- **Exportable results** including cleaned datasets, comparison tables, and publication-ready visualizations
+
+### Use Cases
+
+This framework serves multiple industry applications:
+
+1. **Facility Benchmarking**: Compare your pricing against facilities with similar characteristics
+2. **Market Analysis**: Understand regional price variations and competitive positioning
+3. **Pricing Strategy**: Quantify the premium justified by certifications or quality improvements
+4. **Investment Planning**: Inform decisions about processing upgrades or certification investments
+5. **Market Entry**: Assess pricing dynamics before entering new geographic markets
+
+### Getting Started
+
+The notebook is designed for use in Google Colab with two data collection options:
+
+**Option 1 - Manual Entry (Recommended):**
+- Skip to Section 6 in the notebook
+- Use the provided template to enter facility data
+- Minimum 10-15 facilities recommended for meaningful analysis
+
+**Option 2 - CSV Upload:**
+- Prepare data using the included schema
+- Upload to Colab and load via pandas
+
+**Option 3 - Google Sheets Integration:**
+- Maintain live dataset in Google Sheets
+- Auto-sync for continuous analysis
+
+See notebook documentation for detailed instructions and data schema.
+
+### Sample Output
+
+The analysis generates:
+- Summary statistics with variability metrics (CV, IQR, range)
+- Statistical test results for categorical comparisons (with p-values)
+- Box plots and bar charts for visual comparison
+- Multi-factor heatmaps showing interaction effects
+- Comprehensive Excel workbook with all results
+- Text summary report with key findings
+
+### Future Development
+
+Potential extensions for this framework:
+- Predictive pricing model using multiple regression
+- Geographic clustering analysis 
+- Temporal analysis of seasonal pricing variations
+- Integration with facility production data for unit economics
+- API for real-time industry pricing database
+
+---
+
+**Technologies:** Python, pandas, scipy, seaborn, matplotlib, Google Colab  
+**Domain:** Computational Agronomy, Agricultural Data Science, Market Analysis
+---
 
 ## Technical Stack
 
